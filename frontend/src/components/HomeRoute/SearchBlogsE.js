@@ -12,6 +12,7 @@ function SearchBlogsE({ placeholder }) {
     const getBlogs = async () => {
         try {
             const res = await fetch('https://test-h0x9.onrender.com/blog', {
+                mode: "no-cors",
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
