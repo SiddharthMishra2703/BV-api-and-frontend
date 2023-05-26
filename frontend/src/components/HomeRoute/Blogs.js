@@ -23,7 +23,7 @@ export default function Blogs() {
                 credentials: "include"
             });
 
-            const data = await res.json();
+            const data = res.text;
             setUserData(data);
 
             if (!res.status === 200) {
