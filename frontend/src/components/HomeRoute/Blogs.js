@@ -23,12 +23,11 @@ export default function Blogs() {
                 credentials: "include"
             });
 
-            const data = res.text;
+            const data = await res.json();
             setUserData(data);
 
             if (!res.status === 200) {
-                const error = new Error(res.error);
-                throw error;
+                console.log(data);
             }
         } catch (err) {
             console.log(err);
@@ -75,7 +74,7 @@ export default function Blogs() {
             <p className="text-muted text-center">Choose a Blog to read full content</p>
             <div className='text-center'>
                 {/* <SearchBlogs /> */}
-                <SearchBlogE placeholder="Enter Blog Name..." />
+{/*<SearchBlogE placeholder="Enter Blog Name..." />*/}
             </div>
 
             <div className="d-flex flex-row-reverse">
