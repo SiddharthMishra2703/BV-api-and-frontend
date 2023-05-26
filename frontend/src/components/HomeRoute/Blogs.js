@@ -13,7 +13,7 @@ export default function Blogs() {
 
     const getData = async () => {
         try {
-            const res = await fetch(process.env.LINK + '/blog', {
+            const res = await fetch('https://test-h0x9.onrender.com/blog', {
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
