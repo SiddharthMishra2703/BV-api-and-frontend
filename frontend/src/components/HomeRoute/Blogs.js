@@ -13,14 +13,14 @@ export default function Blogs() {
 
     const getData = async () => {
         try {
-            const res = await fetch('https://test-h0x9.onrender.com/blog', {
+            const res = await fetch(process.env.URLL, {
                 mode: "no-cors",
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
                     "Content-Type": "application/json"
-                },
-                credentials: "include"
+                }
+                //credentials: "include"
             });
 
             const data = await res.json();
