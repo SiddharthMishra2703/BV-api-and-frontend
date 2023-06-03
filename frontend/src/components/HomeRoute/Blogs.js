@@ -13,7 +13,7 @@ export default function Blogs() {
 
     const getData = async () => {
         try {
-            const res = await fetch(process.env.URLL, {
+            const res = await fetch(process.env.REACT_APP_API, {
                 mode: "no-cors",
                 method: "GET",
                 headers: {
