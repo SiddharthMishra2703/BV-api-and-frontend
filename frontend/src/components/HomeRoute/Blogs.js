@@ -14,13 +14,11 @@ export default function Blogs() {
     const getData = async () => {
         try {
             const res = await fetch(process.env.REACT_APP_API, {
-                mode: "no-cors",
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
                     "Content-Type": "application/json"
                 }
-                //credentials: "include"
             });
 
             const data = await res.json();
